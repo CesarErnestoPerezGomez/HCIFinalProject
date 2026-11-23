@@ -159,7 +159,7 @@ namespace EcoSort.Editor
 
             // Buttons Container
             // Button 1: "Jugar"
-            GameObject playBtnGO = CreateButton(bgGO.transform, "PlayButton", new Vector2(250f, 74f), LoadSprite("PillButtonGreen"), Color.white, "Jugar", 34, Color.white);
+            GameObject playBtnGO = CreateButton(bgGO.transform, "PlayButton", new Vector2(250f, 74f), false, new Color(36f / 255f, 115f / 255f, 72f / 255f, 1f), "Jugar", 34, Color.white);
             RectTransform playRect = playBtnGO.GetComponent<RectTransform>();
             playRect.anchorMin = new Vector2(0f, 1f);
             playRect.anchorMax = new Vector2(0f, 1f);
@@ -168,17 +168,6 @@ namespace EcoSort.Editor
             LocalizedText playLoc = playBtnGO.GetComponentInChildren<TextMeshProUGUI>().gameObject.AddComponent<LocalizedText>();
             playLoc.SetTexts("Jugar", "Play");
             Button playBtn = playBtnGO.GetComponent<Button>();
-
-            // Button 2: "Mi progreso"
-            GameObject progressBtnGO = CreateButton(bgGO.transform, "ProgressButton", new Vector2(230f, 62f), LoadSprite("PillButtonOutline"), Color.white, "Mi progreso", 24, new Color(0.14f, 0.45f, 0.28f, 1f));
-            RectTransform progRect = progressBtnGO.GetComponent<RectTransform>();
-            progRect.anchorMin = new Vector2(0f, 1f);
-            progRect.anchorMax = new Vector2(0f, 1f);
-            progRect.pivot = new Vector2(0f, 1f);
-            progRect.anchoredPosition = new Vector2(60f, -425f);
-            LocalizedText progLoc = progressBtnGO.GetComponentInChildren<TextMeshProUGUI>().gameObject.AddComponent<LocalizedText>();
-            progLoc.SetTexts("Mi progreso", "My Progress");
-            Button progBtn = progressBtnGO.GetComponent<Button>();
 
             // (Note: "Comodidad" button is completely removed as requested!)
 
@@ -193,49 +182,32 @@ namespace EcoSort.Editor
             LocalizedText instLoc = instGO.AddComponent<LocalizedText>();
             instLoc.SetTexts("Apunta con el control y presiona el gatillo para elegir.", "Aim with the controller and pull the trigger to select.");
 
-            // --- Language Toggle Button (Bottom Right) ---
-            // User request: "y pon un boton en la esquina derecha inferior para cambiar el idioma a Ingles y viceversa"
-            GameObject langBtnGO = CreateButton(bgGO.transform, "LanguageButton", new Vector2(210f, 54f), LoadSprite("PillButtonOutline"), Color.white, "Idioma: English", 20, new Color(0.14f, 0.45f, 0.28f, 1f));
+            // --- Language Toggle Button (Below Play) ---
+            GameObject langBtnGO = CreateButton(bgGO.transform, "LanguageButton", new Vector2(210f, 54f), true, Color.white, "Idioma: English", 20, new Color(0.14f, 0.45f, 0.28f, 1f));
             RectTransform langRect = langBtnGO.GetComponent<RectTransform>();
             langRect.anchorMin = new Vector2(1f, 0f);
             langRect.anchorMax = new Vector2(1f, 0f);
             langRect.pivot = new Vector2(1f, 0f);
-            langRect.anchoredPosition = new Vector2(-60f, 40f);
+            langRect.anchoredPosition = new Vector2(-970f, 201f);
             Button langBtn = langBtnGO.GetComponent<Button>();
             TextMeshProUGUI langBtnText = langBtnGO.GetComponentInChildren<TextMeshProUGUI>();
 
             // Wire MainMenuUI
             SetPrivateField(menuUI, "playButton", playBtn);
-            SetPrivateField(menuUI, "progressButton", progBtn);
             SetPrivateField(menuUI, "languageToggleButton", langBtn);
             SetPrivateField(menuUI, "languageButtonText", langBtnText);
             SetPrivateField(menuUI, "playSceneName", "TutorialLevel");
 
-            // --- Right Side: 6 Recycling Bins Grid ---
-            GameObject binsContainer = new GameObject("RecyclingBinsGrid");
-            binsContainer.transform.SetParent(bgGO.transform, false);
-            RectTransform binsRect = binsContainer.AddComponent<RectTransform>();
-            binsRect.anchorMin = new Vector2(1f, 0.5f);
-            binsRect.anchorMax = new Vector2(1f, 0.5f);
-            binsRect.pivot = new Vector2(1f, 0.5f);
-            binsRect.anchoredPosition = new Vector2(-60f, 10f);
-            binsRect.sizeDelta = new Vector2(460f, 380f);
-
-            // Bins setup: 2 rows of 3 columns
-            // Row 1 (y = 80): Green, Grey, Red
-            // Row 2 (y = -85): Blue, Yellow, Orange
-            string[] binNamesRow1 = { "BinGreen", "BinGrey", "BinRed" };
-            string[] binNamesRow2 = { "BinBlue", "BinYellow", "BinOrange" };
-            float[] xOffsets = { -300f, -150f, 0f };
-
-            for (int i = 0; i < 3; i++)
-            {
-                CreateBinImage(binsContainer.transform, binNamesRow1[i], LoadSprite(binNamesRow1[i]), new Vector2(xOffsets[i], 85f));
-            }
-            for (int i = 0; i < 3; i++)
-            {
-                CreateBinImage(binsContainer.transform, binNamesRow2[i], LoadSprite(binNamesRow2[i]), new Vector2(xOffsets[i], -85f));
-            }
+            // --- Right Side: Application Logo ---
+            GameObject logoGO = CreateImage(bgGO.transform, "EcoSortLogo", new Vector2(460f, 420f), LoadSprite("EcoSort VR Logo"), Color.white);
+            RectTransform logoRect = logoGO.GetComponent<RectTransform>();
+            logoRect.anchorMin = new Vector2(1f, 0.5f);
+            logoRect.anchorMax = new Vector2(1f, 0.5f);
+            logoRect.pivot = new Vector2(1f, 0.5f);
+            logoRect.anchoredPosition = new Vector2(-60f, 10f);
+            Image logoImage = logoGO.GetComponent<Image>();
+            logoImage.preserveAspect = true;
+            logoImage.raycastTarget = false;
 
             // Save Prefab
             string prefabPath = $"{PrefabDir}/MainMenuCanvas.prefab";
@@ -245,23 +217,6 @@ namespace EcoSort.Editor
             string scenePath = $"{ScenesDir}/MainMenu.unity";
             EditorSceneManager.SaveScene(scene, scenePath);
             Debug.Log($"[EcoSortUIBuilder] Main Menu Scene and Prefab saved: {scenePath}");
-        }
-
-        private static void CreateBinImage(Transform parent, string name, Sprite sprite, Vector2 localPos)
-        {
-            GameObject binGO = new GameObject(name);
-            binGO.transform.SetParent(parent, false);
-            RectTransform rt = binGO.AddComponent<RectTransform>();
-            rt.anchorMin = new Vector2(1f, 0.5f);
-            rt.anchorMax = new Vector2(1f, 0.5f);
-            rt.pivot = new Vector2(0.5f, 0.5f);
-            rt.anchoredPosition = localPos;
-            rt.sizeDelta = new Vector2(125f, 145f);
-
-            Image img = binGO.AddComponent<Image>();
-            img.sprite = sprite;
-            img.preserveAspect = true;
-            img.raycastTarget = false;
         }
 
         #endregion
@@ -424,17 +379,17 @@ namespace EcoSort.Editor
             btnLayout.childControlHeight = false;
 
             // Button: "Siguiente nivel"
-            GameObject nextBtnGO = CreateButton(btnRowGO.transform, "NextLevelButton", new Vector2(240f, 66f), LoadSprite("PillButtonGreen"), Color.white, "Siguiente nivel", 24, Color.white);
+            GameObject nextBtnGO = CreateButton(btnRowGO.transform, "NextLevelButton", new Vector2(240f, 66f), false, new Color(36f / 255f, 115f / 255f, 72f / 255f, 1f), "Siguiente nivel", 24, Color.white);
             LocalizedText nextLoc = nextBtnGO.GetComponentInChildren<TextMeshProUGUI>().gameObject.AddComponent<LocalizedText>();
             nextLoc.SetTexts("Siguiente nivel", "Next level");
 
             // Button: "Repetir"
-            GameObject retryBtnGO = CreateButton(btnRowGO.transform, "RetryButton", new Vector2(140f, 66f), LoadSprite("PillButtonOutline"), Color.white, "Repetir", 22, new Color(0.14f, 0.45f, 0.28f, 1f));
+            GameObject retryBtnGO = CreateButton(btnRowGO.transform, "RetryButton", new Vector2(140f, 66f), true, Color.white, "Repetir", 22, new Color(0.14f, 0.45f, 0.28f, 1f));
             LocalizedText retryLoc = retryBtnGO.GetComponentInChildren<TextMeshProUGUI>().gameObject.AddComponent<LocalizedText>();
             retryLoc.SetTexts("Repetir", "Retry");
 
             // Button: "Menú"
-            GameObject menuBtnGO = CreateButton(btnRowGO.transform, "MenuButton", new Vector2(130f, 66f), LoadSprite("PillButtonOutline"), Color.white, "Menú", 22, new Color(0.14f, 0.45f, 0.28f, 1f));
+            GameObject menuBtnGO = CreateButton(btnRowGO.transform, "MenuButton", new Vector2(130f, 66f), true, Color.white, "Menú", 22, new Color(0.14f, 0.45f, 0.28f, 1f));
             LocalizedText menuLoc = menuBtnGO.GetComponentInChildren<TextMeshProUGUI>().gameObject.AddComponent<LocalizedText>();
             menuLoc.SetTexts("Menú", "Menu");
 
@@ -785,7 +740,7 @@ namespace EcoSort.Editor
             return go;
         }
 
-        private static GameObject CreateButton(Transform parent, string name, Vector2 size, Sprite bgSprite, Color bgColor, string label, float fontSize, Color textColor)
+        private static GameObject CreateButton(Transform parent, string name, Vector2 size, bool outlined, Color bgColor, string label, float fontSize, Color textColor)
         {
             GameObject btnGO = new GameObject(name);
             btnGO.transform.SetParent(parent, false);
@@ -793,9 +748,16 @@ namespace EcoSort.Editor
             rt.sizeDelta = size;
 
             Image img = btnGO.AddComponent<Image>();
-            img.sprite = bgSprite;
             img.color = bgColor;
-            img.type = Image.Type.Sliced;
+            img.type = Image.Type.Simple;
+
+            if (outlined)
+            {
+                Outline outline = btnGO.AddComponent<Outline>();
+                outline.effectColor = new Color(36f / 255f, 115f / 255f, 72f / 255f, 1f);
+                outline.effectDistance = new Vector2(2f, -2f);
+                outline.useGraphicAlpha = true;
+            }
 
             Button btn = btnGO.AddComponent<Button>();
             ColorBlock cb = btn.colors;

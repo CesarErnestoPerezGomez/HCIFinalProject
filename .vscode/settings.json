@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "VrTest2.slnx"
+    "dotnet.defaultSolution": "HCIFinalProject.slnx"
 }

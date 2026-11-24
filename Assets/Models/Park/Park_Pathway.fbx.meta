@@ -7,6 +7,141 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Mat_NPC_Backpack
+    second: {fileID: 2100000, guid: 3609a6f0e4af8e643bc15a348ac5d7ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_Cheeks
+    second: {fileID: 2100000, guid: d203011d27950f04d810d60b9f408d74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_Eyes
+    second: {fileID: 2100000, guid: 7743d86110567c84391d3aae25f697d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_HairBrown
+    second: {fileID: 2100000, guid: 4e3378fc3ea11ad428b5b554bde65087, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_HairDark
+    second: {fileID: 2100000, guid: 7e73249805e894c4989f8fd9d2659ef4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_HatBeanie
+    second: {fileID: 2100000, guid: c71a57afd55da0742a2f712a98308a89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_HatRed
+    second: {fileID: 2100000, guid: 2287f9e0af6c0d94abe9830ca22eee06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_HatStraw
+    second: {fileID: 2100000, guid: ccce76f35f6ee0446a220fa2baa009e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_PantsBlue
+    second: {fileID: 2100000, guid: 0e95bbe15252bf643aba4cc8560042aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_PantsKhaki
+    second: {fileID: 2100000, guid: 6f26d9ae3acdd914fa56e261a9daf5d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_PantsTeal
+    second: {fileID: 2100000, guid: 8769faba5097bed4ebc734aa9379dcfc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_ShirtCoral
+    second: {fileID: 2100000, guid: 9cc8a6b6f8dc4624189837f558ec8057, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_ShirtCream
+    second: {fileID: 2100000, guid: 0685cdff841ef9e4fbd47550035aa8f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_ShirtMint
+    second: {fileID: 2100000, guid: 7313d089cedd3bd4aaff3f05354d2f0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_ShirtYellow
+    second: {fileID: 2100000, guid: 88dc7f980936a964ab7702572e56a624, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_Shoes
+    second: {fileID: 2100000, guid: b8f5bfcd33c40954f88de3a58080d482, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_Skin
+    second: {fileID: 2100000, guid: 692b3e215d760214ebe8992e13acea32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_NPC_SkinTan
+    second: {fileID: 2100000, guid: ed3b968bbe6da884789ffed26a4ddef2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_Brass
+    second: {fileID: 2100000, guid: 63313463340668d4bb1bbf1285362b15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_BushGreen
+    second: {fileID: 2100000, guid: c39cae5073bdf6f4992d37c0ce044673, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_BushGreenLight
+    second: {fileID: 2100000, guid: bc94725d0ed84cc4fb858535c8dfd677, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_CastIron
+    second: {fileID: 2100000, guid: 97a8bfe8fe4c0e44aa3085774d5a2fb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_FlowerBlue
+    second: {fileID: 2100000, guid: 5ad63188365a2984baa145fbd82d766f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_FlowerPink
+    second: {fileID: 2100000, guid: a64375873a894234498a7c3e50554a22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_FlowerWhite
+    second: {fileID: 2100000, guid: c85cc1f4a9aca4d46b7430d24be3a1a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_FlowerYellow
+    second: {fileID: 2100000, guid: 0268c386bfa34244eae5419532113d77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_LampGlassGlow
+    second: {fileID: 2100000, guid: a979c0087aae1854681cfdddcce9f70c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Mat_Park_PathGravel
     second: {fileID: 2100000, guid: 64b094ba32098524180f280022f627b7, type: 2}
   - first:
@@ -17,6 +152,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Mat_Park_SignBoard
+    second: {fileID: 2100000, guid: 5936f31579c56394c82cd0c3a9a4fcb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_StoneBase
+    second: {fileID: 2100000, guid: 16c34b93d320a2949928c02014b32228, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Mat_Park_StoneLight
     second: {fileID: 2100000, guid: 2e46d4d3e94c9cc42a94bd958ac9a677, type: 2}
   - first:
@@ -24,6 +169,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Mat_Park_StoneTrim
     second: {fileID: 2100000, guid: d3c3dd69149594147932df8382151dbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_WoodDark
+    second: {fileID: 2100000, guid: 8c5b80b48bdf2ef4db2dafb9ff11053a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_WoodLight
+    second: {fileID: 2100000, guid: 027294cf44547444986bcbd745c15d28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Park_WoodWarm
+    second: {fileID: 2100000, guid: c1b009cf502e8e549b679886f4853366, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

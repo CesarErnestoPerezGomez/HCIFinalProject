@@ -85,7 +85,7 @@ These are the categories used within the game. Real-world sorting instructions s
 To build and run the project on a headset, you need:
 
 - Unity Hub.
-- **Unity 6000.5.7f1**, the version recorded in `ProjectSettings/ProjectVersion.txt`.
+- **Unity 6000.5.7f1**.
 - Android Build Support, including Android SDK & NDK Tools and OpenJDK.
 - A Meta Quest headset. The project has been tested on **Meta Quest 3**.
 - Quest controllers.

@@ -12,6 +12,30 @@ The project was developed for our Human–Computer Interaction course. It combin
 - Iker Jesús Ortiz Rojero
 - Rodrigo Zatarain Aguirre
 
+## Functional Application — APK
+
+**[Download EcoSort VR for Meta Quest (.apk)](https://github.com/CesarErnestoPerezGomez/HCIFinalProject/raw/refs/heads/main/EcoSort-VR.apk)**
+
+The application package is named `EcoSort-VR.apk` and belongs in the repository root. Its download size is approximately **113 MiB**. Install this prebuilt Android application on a Meta Quest headset to play without rebuilding the Unity project.
+
+### Install the APK on Meta Quest
+
+1. Download `EcoSort-VR.apk` using the link above.
+2. Enable Developer Mode on the headset and make sure Android Debug Bridge (ADB) is installed on your computer and available in your terminal.
+3. Connect the headset using a USB data cable and accept the **USB debugging** authorization inside the headset.
+4. Open a terminal in the folder containing the downloaded APK and run:
+
+```bash
+adb devices
+adb install -r "EcoSort-VR.apk"
+```
+
+5. After installation succeeds, open the application from the headset's app library under **Unknown Sources** and select **Play**.
+
+See the official [Android Debug Bridge documentation](https://developer.android.com/tools/adb) for device connection and installation help.
+
+The APK uses **Git LFS** because it exceeds GitHub's regular file-size limit. If downloading from its GitHub file page, use **Download raw file**. When obtaining the APK through a Git clone, Git LFS must be installed to retrieve the actual application instead of only its pointer file.
+
 ## The Problem
 
 Waste management is an environmental challenge in Mexico. Understanding how to separate waste is part of addressing this problem, but knowing the names of different categories does not always mean knowing where to place an everyday object.

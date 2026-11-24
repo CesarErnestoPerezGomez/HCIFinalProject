@@ -203,7 +203,7 @@ The research, observations, and documented improvements are available in the pro
 
 ### Figma Prototype
 
-[Open the EcoSort VR prototype](https://www.figma.com/design/OzH605D9P1N6FzpFveihL5/Figma-Prototype-for-final-Project)
+[Open the EcoSort VR prototype]([https://www.figma.com/design/OzH605D9P1N6FzpFveihL5/Figma-Prototype-for-final-Project](https://www.figma.com/design/uhU0gue7RGnwHJi4CQLm14/HCI-FInal-Project?t=tmT2LNHMGYIiIBWG-0))
 
 ### Commercial
 

@@ -187,6 +187,10 @@ Follow [Unity's Meta Horizon Link setup guide](https://docs.unity3d.com/Packages
 ## Functional application (APK)
 [Download EcoSort VR APK](https://github.com/CesarErnestoPerezGomez/HCIFinalProject/raw/refs/heads/main/EcoSort-VR.apk)
 
+## Presentation
+
+[Download the EcoSort VR presentation (.pptx)](https://github.com/CesarErnestoPerezGomez/HCIFinalProject/raw/refs/heads/main/EcoSort-Presentation.pptx)
+
 ## Design and User Testing
 
 We developed the interface flow in Figma before implementing it in Unity. The design includes level introductions, practice screens, feedback, and results.

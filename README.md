@@ -184,6 +184,7 @@ Follow [Unity's Meta Horizon Link setup guide](https://docs.unity3d.com/Packages
 | Request help | Select the **Hint** button. |
 | Change language | Select the language button in the main menu. |
 
+## Functional application (APK)
 [Download EcoSort VR APK](https://github.com/CesarErnestoPerezGomez/HCIFinalProject/raw/refs/heads/main/EcoSort-VR.apk)
 
 ## Design and User Testing
